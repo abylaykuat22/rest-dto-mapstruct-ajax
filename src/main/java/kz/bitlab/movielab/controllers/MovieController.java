@@ -21,8 +21,8 @@ public class MovieController {
     }
 
     @GetMapping
-    public List<MovieView> movies() {
-        return movieService.getMovies();
+    public List<MovieView> movies(@RequestParam(required = false) String search) {
+        return movieService.getMovies(search);
     }
 
     @GetMapping("{id}")
