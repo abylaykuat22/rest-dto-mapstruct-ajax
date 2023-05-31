@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "movies")
 @Getter
 @Setter
 public class Movie {
@@ -17,4 +16,6 @@ public class Movie {
     private double rating;
     private int amountView;
     private String promoCode;
+    @ManyToOne
+    private User mainActor;
 }
